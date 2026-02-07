@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATULUNGAN Foundation - Empowering Communities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-cross">
+                    <div class="cross-vertical"></div>
+                    <div class="cross-horizontal"></div>
+                    <div class="cross-circle"></div>
+                </div>
+                <span class="logo-text">KATULUNGAN Foundation</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Empowering Communities Through Compassion</h1>
+            <p>Join us in making a difference in the lives of those who need it most</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="window.location.href='volunteer.html'">Volunteer Now</button>
+                <button class="btn btn-secondary" onclick="window.location.href='donate.html'">Donate Today</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25,000+</div>
+                    <div class="stat-label">Lives Touched</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Volunteers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">₱8.5M+</div>
+                    <div class="stat-label">Donations Received</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-campaign">
+        <div class="container">
+            <h2>Featured Campaign</h2>
+            <div class="campaign-highlight" id="campaignHighlight">
+                <div class="campaign-card">
+                    <h3>Flood Relief Operation 2025</h3>
+                    <p>Providing emergency relief to families affected by recent flooding in Central Luzon</p>
+                    <button class="btn btn-primary" id="learnMoreBtn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="container">
+            <h2>Get Involved</h2>
+            <div class="links-grid">
+                <div class="link-card">
+                    <h3>Volunteer</h3>
+                    <p>Make a difference in your community</p>
+                    <a href="volunteer.html" class="btn btn-outline">Join Us</a>
+                </div>
+                <div class="link-card">
+                    <h3>Donate</h3>
+                    <p>Support our humanitarian missions</p>
+                    <a href="donate.html" class="btn btn-outline">Give Now</a>
+                </div>
+                <div class="link-card">
+                    <h3>Our Programs</h3>
+                    <p>Discover our humanitarian services</p>
+                    <a href="services.html" class="btn btn-outline">Explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Campaign Highlight -->
+    <div id="campaignModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Flood Relief Operation 2025</h2>
+            <p>Our emergency response team is actively working in Central Luzon to provide:</p>
+            <ul>
+                <li>Emergency food packages to 5,000 families</li>
+                <li>Clean water and hygiene kits</li>
+                <li>Medical assistance and supplies</li>
+                <li>Temporary shelter materials</li>
+            </ul>
+            <p><strong>Your support makes this possible.</strong></p>
+            <button class="btn btn-primary" onclick="window.location.href='donate.html'">Support This Campaign</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>KATULUNGAN Foundation</h4>
+                    <p>Empowering communities through compassion and service</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@katulungan.org</p>
+                    <p>Phone: (02) 8123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KATULUNGAN Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

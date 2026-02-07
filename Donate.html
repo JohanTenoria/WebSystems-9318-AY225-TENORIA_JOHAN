@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - KATULUNGAN Foundation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-cross">
+                    <div class="cross-vertical"></div>
+                    <div class="cross-horizontal"></div>
+                    <div class="cross-circle"></div>
+                </div>
+                <span class="logo-text">KATULUNGAN Foundation</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="volunteer.html">Volunteer</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Make a Donation</h1>
+            <p>Your generosity saves lives and transforms communities</p>
+        </div>
+    </section>
+
+    <section class="donate-section">
+        <div class="container">
+            <div class="donate-intro">
+                <h2>Why Your Donation Matters</h2>
+                <p>Every peso you contribute directly supports our humanitarian missions across the Philippines. From emergency disaster relief to life-saving blood services, your donation makes real impact in communities that need it most.</p>
+                
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">🍚</div>
+                        <h4>₱500</h4>
+                        <p>Provides emergency food pack for 1 family</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">💊</div>
+                        <h4>₱1,000</h4>
+                        <p>Supplies medical kit for disaster response</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">🏠</div>
+                        <h4>₱5,000</h4>
+                        <p>Provides shelter materials for 1 family</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">❤️</div>
+                        <h4>₱10,000</h4>
+                        <p>Supports blood donation drive serving 50+ patients</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donation-container">
+                <h2>Choose Your Donation Amount</h2>
+                
+                <div class="donation-type-toggle">
+                    <button class="type-btn active" data-type="one-time">One-Time Donation</button>
+                    <button class="type-btn" data-type="monthly">Monthly Donation</button>
+                </div>
+
+                <div class="amount-selection">
+                    <h3>Select Amount</h3>
+                    <div class="amount-grid">
+                        <button class="amount-btn" data-amount="500">₱500</button>
+                        <button class="amount-btn" data-amount="1000">₱1,000</button>
+                        <button class="amount-btn" data-amount="2500">₱2,500</button>
+                        <button class="amount-btn" data-amount="5000">₱5,000</button>
+                        <button class="amount-btn" data-amount="10000">₱10,000</button>
+                        <button class="amount-btn custom-btn">Custom Amount</button>
+                    </div>
+
+                    <div class="custom-amount-input" id="customAmountContainer" style="display: none;">
+                        <label for="customAmount">Enter Custom Amount (₱)</label>
+                        <input type="number" id="customAmount" min="100" placeholder="Enter amount in pesos">
+                    </div>
+                </div>
+
+                <form id="donationForm" class="donation-form">
+                    <input type="hidden" id="selectedAmount" name="selectedAmount" value="">
+                    <input type="hidden" id="donationType" name="donationType" value="one-time">
+
+                    <h3>Donor Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donorFirstName">First Name *</label>
+                            <input type="text" id="donorFirstName" name="donorFirstName" required>
+                            <span class="error-message" id="donorFirstNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorLastName">Last Name *</label>
+                            <input type="text" id="donorLastName" name="donorLastName" required>
+                            <span class="error-message" id="donorLastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="donorEmail">Email Address *</label>
+                            <input type="email" id="donorEmail" name="donorEmail" required>
+                            <span class="error-message" id="donorEmailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="donorPhone">Phone Number *</label>
+                            <input type="tel" id="donorPhone" name="donorPhone" required>
+                            <span class="error-message" id="donorPhoneError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donorAddress">Address (Optional)</label>
+                        <textarea id="donorAddress" name="donorAddress" rows="2"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dedicationType">Dedication (Optional)</label>
+                        <select id="dedicationType" name="dedicationType">
+                            <option value="">-- Select One --</option>
+                            <option value="in-honor">In Honor Of</option>
+                            <option value="in-memory">In Memory Of</option>
+                            <option value="none">No Dedication</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="dedicationNameContainer" style="display: none;">
+                        <label for="dedicationName">Honoree/Memorial Name</label>
+                        <input type="text" id="dedicationName" name="dedicationName">
+                    </div>
+
+                    <h3>Payment Method</h3>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="gcash" name="paymentMethod" value="gcash" required>
+                            <label for="gcash" class="payment-label">
+                                <div class="payment-icon">📱</div>
+                                <div>
+                                    <strong>GCash</strong>
+                                    <p>Mobile payment - instant processing</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="bank" name="paymentMethod" value="bank">
+                            <label for="bank" class="payment-label">
+                                <div class="payment-icon">🏦</div>
+                                <div>
+                                    <strong>Bank Transfer</strong>
+                                    <p>Direct bank deposit</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="card" name="paymentMethod" value="card">
+                            <label for="card" class="payment-label">
+                                <div class="payment-icon">💳</div>
+                                <div>
+                                    <strong>Credit/Debit Card</strong>
+                                    <p>Visa, Mastercard, JCB</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                            <label for="paypal" class="payment-label">
+                                <div class="payment-icon">🌐</div>
+                                <div>
+                                    <strong>PayPal</strong>
+                                    <p>International donations</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <span class="error-message" id="paymentMethodError"></span>
+
+                    <div id="paymentInstructions" class="payment-instructions" style="display: none;">
+                        <!-- Payment instructions will be dynamically shown here -->
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="donorTerms" name="donorTerms" required>
+                            I understand that my donation supports KATULUNGAN Foundation's humanitarian programs *
+                        </label>
+                        <span class="error-message" id="donorTermsError"></span>
+                    </div>
+
+                    <div class="donation-summary" id="donationSummary" style="display: none;">
+                        <h3>Donation Summary</h3>
+                        <div class="summary-row">
+                            <span>Donation Type:</span>
+                            <strong id="summaryType">One-Time</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span>Amount:</span>
+                            <strong id="summaryAmount">₱0</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span>Payment Method:</span>
+                            <strong id="summaryPayment">-</strong>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Complete Donation</button>
+                    </div>
+                </form>
+
+                <div id="donationSuccessMessage" class="success-message" style="display: none;">
+                    <h3>✓ Thank You for Your Generous Donation!</h3>
+                    <p id="successDonationAmount"></p>
+                    <p>Your contribution will directly support our humanitarian missions. A confirmation email has been sent to <strong id="successEmail"></strong>.</p>
+                    <p><em>Note: This is a demo. No actual payment has been processed.</em></p>
+                    <button class="btn btn-primary" onclick="location.reload()">Make Another Donation</button>
+                </div>
+            </div>
+
+            <div class="recent-donations">
+                <h3>Recent Donations</h3>
+                <p class="donations-subtitle">Join these generous supporters making a difference</p>
+                <div id="donationsList">
+                    <!-- Will be populated by JavaScript from LocalStorage -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>KATULUNGAN Foundation</h4>
+                    <p>Empowering communities through compassion and service</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@katulungan.org</p>
+                    <p>Phone: (02) 8123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KATULUNGAN Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
